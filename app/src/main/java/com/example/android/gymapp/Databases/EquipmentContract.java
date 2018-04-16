@@ -18,6 +18,7 @@ public class EquipmentContract
     public static final class EquipmentEntry implements BaseColumns
     {
         public static final String TABLE_NAME="equipment";
+        public static final String COLUMN_EQUIPMENTID="equipment_id";
         public static final String COLUMN_NAME="name";
         public static final String COLUMN_TYPE="type";
     }

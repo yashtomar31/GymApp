@@ -18,6 +18,7 @@ public class ManagerContract
     public static final class ManagerEntry implements BaseColumns
     {
         public static final String TABLE_NAME="manager";
+        public static final String COLUMN_MANAGERID="manager_id";
         public static final String COLUMN_NAME="name";
         public static final String COLUMN_LEVEL="level";
         public static final String COLUMN_TITLE="title";

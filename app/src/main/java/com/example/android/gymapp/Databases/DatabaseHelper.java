@@ -15,7 +15,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
     private static final int DATABASE_VERSION=1;
 
     private static final String CREATE_TABLE_EQUIPMENT="CREATE TABLE "+EquipmentContract.EquipmentEntry.TABLE_NAME+" ( "
-            + EquipmentContract.EquipmentEntry._ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + EquipmentContract.EquipmentEntry.COLUMN_EQUIPMENTID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
             + EquipmentContract.EquipmentEntry.COLUMN_NAME+" TEXT NOT NULL, "
             + EquipmentContract.EquipmentEntry.COLUMN_TYPE+" TEXT NOT NULL "+");";
 
@@ -29,10 +29,20 @@ public class DatabaseHelper extends SQLiteOpenHelper
             + CustomerContract.CustomerEntry.COLUMN_PHONE+" TEXT NOT NULL "+");";
 
     private static final String CREATE_TABLE_MANAGER="CREATE TABLE "+ ManagerContract.ManagerEntry.TABLE_NAME+" ( "
-            + ManagerContract.ManagerEntry._ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + ManagerContract.ManagerEntry.COLUMN_MANAGERID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
             + ManagerContract.ManagerEntry.COLUMN_NAME+" TEXT NOT NULL, "
             + ManagerContract.ManagerEntry.COLUMN_LEVEL+" TEXT NOT NULL, "
             + ManagerContract.ManagerEntry.COLUMN_TITLE+" TEXT NOT NULL "+");";
+
+    private static final String CREATE_TABLE_EQUIPMENT_CHECKOUT_RELATION="CREATE TABLE "+ EquipmentCheckoutRelationContract.EquipmentCheckoutRelationEntry.TABLE_NAME+" ( "
+            + EquipmentCheckoutRelationContract.EquipmentCheckoutRelationEntry.COLUMN_EQUIPMENTCHECKOUTID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + EquipmentCheckoutRelationContract.EquipmentCheckoutRelationEntry.COLUMN_CHECKOUTDATE+" TEXT NOT NULL, "
+            + EquipmentCheckoutRelationContract.EquipmentCheckoutRelationEntry.COLUMN_DUEDAY+" TEXT NOT NULL, "
+            + EquipmentCheckoutRelationContract.EquipmentCheckoutRelationEntry.COLUMN_CUSTOMERID+" INTEGER, "
+            + EquipmentCheckoutRelationContract.EquipmentCheckoutRelationEntry.COLUMN_EQUIPMENTID+" INTEGER, "
+            + "FOREIGN KEY ("+ EquipmentCheckoutRelationContract.EquipmentCheckoutRelationEntry.COLUMN_CUSTOMERID+") REFERENCES "+ CustomerContract.CustomerEntry.TABLE_NAME+"("+ CustomerContract.CustomerEntry.COLUMN_CUSTOMERID+"), "
+            +"FOREIGN KEY ("+ EquipmentCheckoutRelationContract.EquipmentCheckoutRelationEntry.COLUMN_EQUIPMENTID+") REFERENCES "+ EquipmentContract.EquipmentEntry.TABLE_NAME+"("+ EquipmentContract.EquipmentEntry.COLUMN_EQUIPMENTID+")"+");";
+
 
     public DatabaseHelper(Context context)
     {
@@ -45,6 +55,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
         sqLiteDatabase.execSQL(CREATE_TABLE_EQUIPMENT);
         sqLiteDatabase.execSQL(CREATE_TABLE_CUSTOMER);
         sqLiteDatabase.execSQL(CREATE_TABLE_MANAGER);
+        sqLiteDatabase.execSQL(CREATE_TABLE_EQUIPMENT_CHECKOUT_RELATION);
     }
 
     @Override
@@ -53,6 +64,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ EquipmentContract.EquipmentEntry.TABLE_NAME);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ CustomerContract.CustomerEntry.TABLE_NAME);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ ManagerContract.ManagerEntry.TABLE_NAME);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ EquipmentCheckoutRelationContract.EquipmentCheckoutRelationEntry.TABLE_NAME);
         onCreate(sqLiteDatabase);
     }
 }
