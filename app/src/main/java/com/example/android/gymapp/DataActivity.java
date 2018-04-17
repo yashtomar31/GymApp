@@ -8,6 +8,8 @@ import android.widget.Button;
 
 import com.example.android.gymapp.Databases.DisplayCustomerActivity;
 
+import butterknife.ButterKnife;
+
 public class DataActivity extends AppCompatActivity
 {
 
@@ -15,6 +17,8 @@ public class DataActivity extends AppCompatActivity
     Button showCustomers;
     Button insertEquipment;
     Button insertTrainer;
+    Button showTrainers;
+    Button showEquipments;
 
 
     @Override
@@ -28,6 +32,9 @@ public class DataActivity extends AppCompatActivity
         showCustomers=(Button) findViewById(R.id.btn_show_customers);
         insertEquipment=(Button) findViewById(R.id.btn_insert_equipment);
         insertTrainer=(Button) findViewById(R.id.btn_insert_trainer);
+        showEquipments=(Button) findViewById(R.id.btn_show_equipments);
+        showTrainers=(Button) findViewById(R.id.btn_show_trainers);
+
 
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +51,22 @@ public class DataActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getApplicationContext(), DisplayCustomerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        showEquipments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), DisplayEquipmentActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        showTrainers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), DisplayTrainerActivity.class);
                 startActivity(intent);
             }
         });
