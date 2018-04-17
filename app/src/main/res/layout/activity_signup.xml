@@ -136,70 +136,58 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:textColorHint="@android:color/white"
-                android:backgroundTint="@android:color/white"
-                android:layout_marginTop="5dp"
-                android:layout_height="wrap_content">
-
-                <EditText
+                android:backgroundTint="@android:color/white">
+                <EditText android:id="@+id/input_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/input_phone"
-                    android:hint="Phone Number"
+                    android:inputType="textCapWords"
+                    android:hint="Phone"
                     app:backgroundTint="@android:color/white"
-                    android:inputType="date"
-                    android:focusable="false"
                     android:textColor="@android:color/white"
                     android:textColorHint="@android:color/white"/>
-
             </android.support.design.widget.TextInputLayout>
+
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:textColorHint="@android:color/white"
-                android:backgroundTint="@android:color/white"
-                android:layout_marginTop="5dp"
-                android:layout_height="wrap_content">
-
-                <EditText
+                android:backgroundTint="@android:color/white">
+                <EditText android:id="@+id/input_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/input_address"
+                    android:inputType="textCapWords"
                     android:hint="Address"
                     app:backgroundTint="@android:color/white"
-                    android:inputType="date"
-                    android:focusable="false"
                     android:textColor="@android:color/white"
                     android:textColorHint="@android:color/white"/>
-
             </android.support.design.widget.TextInputLayout>
+
+
 
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:textColorHint="@android:color/white"
-                android:backgroundTint="@android:color/white"
-                android:layout_marginTop="5dp"
-                android:layout_height="wrap_content">
-
-                <EditText
+                android:backgroundTint="@android:color/white">
+                <EditText android:id="@+id/input_age"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/input_age"
+                    android:inputType="textCapWords"
                     android:hint="Age"
                     app:backgroundTint="@android:color/white"
-                    android:inputType="date"
-                    android:focusable="false"
                     android:textColor="@android:color/white"
                     android:textColorHint="@android:color/white"/>
-
             </android.support.design.widget.TextInputLayout>
-
-
-
 
             <FrameLayout
                 android:layout_width="wrap_content"
