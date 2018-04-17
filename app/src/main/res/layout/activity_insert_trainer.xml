@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+
 <ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
@@ -18,12 +19,12 @@
         android:weightSum="1">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center_vertical|center_horizontal|center"
-            android:text="Add Customer"
+            android:text="Add Trainer"
             android:fontFamily="casual"
             android:textColor="@android:color/white"
             android:textSize="50sp" />
@@ -50,7 +51,7 @@
                 android:layout_marginBottom="5dp"
                 android:textColorHint="@android:color/white"
                 android:backgroundTint="@android:color/white">
-                <EditText android:id="@+id/input_name"
+                <EditText android:id="@+id/input_name_trainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords"
@@ -72,67 +73,14 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/input_email"
-                    android:inputType="textEmailAddress"
+                    android:id="@+id/input_email_trainer"
+                    android:inputType="textCapWords"
                     android:hint="Email"
                     app:backgroundTint="@android:color/white"
                     android:textColor="@android:color/white"
                     android:textColorHint="@android:color/white"/>
 
             </android.support.design.widget.TextInputLayout>
-
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_marginBottom="5dp"
-                android:textColorHint="@android:color/white"
-                android:backgroundTint="@android:color/white"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/input_password"
-                    android:hint="Password"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="5dp"
-                    app:backgroundTint="@android:color/white"
-                    android:inputType="textPassword"
-                    app:passwordToggleEnabled="true"
-                    android:textColor="@android:color/white"
-                    android:textColorHint="@android:color/white"/>
-
-            </android.support.design.widget.TextInputLayout>
-
-
-
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_marginBottom="5dp"
-                android:textColorHint="@android:color/white"
-                android:backgroundTint="@android:color/white"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/input_confirm_password"
-                    android:hint="Confirm Password"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="5dp"
-                    app:passwordToggleEnabled="true"
-                    app:backgroundTint="@android:color/white"
-                    android:inputType="textPassword"
-                    android:textColor="@android:color/white"
-                    android:textColorHint="@android:color/white"/>
-
-            </android.support.design.widget.TextInputLayout>
-
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -141,7 +89,7 @@
                 android:layout_marginBottom="5dp"
                 android:textColorHint="@android:color/white"
                 android:backgroundTint="@android:color/white">
-                <EditText android:id="@+id/input_phone"
+                <EditText android:id="@+id/input_phone_trainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords"
@@ -159,11 +107,11 @@
                 android:layout_marginBottom="5dp"
                 android:textColorHint="@android:color/white"
                 android:backgroundTint="@android:color/white">
-                <EditText android:id="@+id/input_address"
+                <EditText android:id="@+id/input_level_trainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords"
-                    android:hint="Address"
+                    android:hint="Level"
                     app:backgroundTint="@android:color/white"
                     android:textColor="@android:color/white"
                     android:textColorHint="@android:color/white"/>
@@ -179,7 +127,7 @@
                 android:layout_marginBottom="5dp"
                 android:textColorHint="@android:color/white"
                 android:backgroundTint="@android:color/white">
-                <EditText android:id="@+id/input_age"
+                <EditText android:id="@+id/input_age_trainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords"
@@ -201,7 +149,7 @@
 
 
                 <Button
-                    android:id="@+id/btn_signup"
+                    android:id="@+id/btn_add_trainer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="15dp"
@@ -211,24 +159,10 @@
                     android:layout_gravity="center"
                     android:textColor="@android:color/white"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:text="Create Account"/>
+                    android:text="Add New Trainer"/>
 
 
             </FrameLayout>
-
-
-
-
-            <TextView android:id="@+id/link_login"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="Have an account?"
-                android:textColor="@android:color/white"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:gravity="center"
-                android:layout_marginBottom="24dp"
-                android:textSize="16sp"/>
 
 
         </LinearLayout>

@@ -13,6 +13,8 @@ public class DataActivity extends AppCompatActivity
 
     Button logoutButton;
     Button showCustomers;
+    Button insertEquipment;
+    Button insertTrainer;
 
 
     @Override
@@ -24,6 +26,8 @@ public class DataActivity extends AppCompatActivity
 
         logoutButton=(Button) findViewById(R.id.btn_logout);
         showCustomers=(Button) findViewById(R.id.btn_show_customers);
+        insertEquipment=(Button) findViewById(R.id.btn_insert_equipment);
+        insertTrainer=(Button) findViewById(R.id.btn_insert_trainer);
 
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +44,22 @@ public class DataActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getApplicationContext(), DisplayCustomerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        insertEquipment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), InsertEquipmentActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        insertTrainer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), InsertTrainerActivity.class);
                 startActivity(intent);
             }
         });

@@ -215,7 +215,7 @@ public class SignupActivity extends AppCompatActivity
         }
 
         if(age.isEmpty()){
-            ageEditText.setError("Enter valid date of birth");
+            ageEditText.setError("Enter valid age");
             valid=false;
         }
         else

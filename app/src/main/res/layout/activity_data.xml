@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 
 <LinearLayout android:layout_width="match_parent"
     android:orientation="vertical"
@@ -32,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="35dp"
         android:background="@color/colorAccent">
 
         <Button
@@ -49,7 +52,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="35dp"
         android:layout_marginBottom="5dp"
         android:background="@color/colorAccent">
 
@@ -64,11 +67,28 @@
 
     </FrameLayout>
 
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:layout_marginBottom="35dp"
+        android:background="@color/colorAccent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_select_trainer"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:text="Select Your Trainer"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
         android:layout_marginBottom="5dp"
         android:background="@color/colorAccent">
 
@@ -83,36 +103,31 @@
 
     </FrameLayout>
 
+
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="35dp"
         android:background="@color/colorAccent">
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_select_trainer"
+            android:id="@+id/btn_show_trainers"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
-            android:text="Select Your Trainer"
+            android:text="Display All Trainers"
             android:background="?attr/selectableItemBackgroundBorderless"/>
 
     </FrameLayout>
 
 
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"/>
-
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="35dp"
         android:layout_marginBottom="5dp"
         android:background="@color/colorAccent">
 
@@ -129,3 +144,5 @@
 
 
 </LinearLayout>
+
+    </ScrollView>
