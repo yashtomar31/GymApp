@@ -32,8 +32,6 @@ public class DisplayCustomerActivity extends AppCompatActivity {
 
         addCustomer=(TextView) findViewById(R.id.add_customer);
 
-        ArrayList<Customer> customers=new ArrayList<Customer>();
-
         DatabaseHelper databaseHelper=new DatabaseHelper(this);
         SQLiteDatabase database=databaseHelper.getReadableDatabase();
 

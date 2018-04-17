@@ -33,8 +33,6 @@ public class DisplayTrainerActivity extends AppCompatActivity
 
         addTrainer=(TextView) findViewById(R.id.add_trainer);
 
-        ArrayList<Trainer> trainers=new ArrayList<Trainer>();
-
         DatabaseHelper databaseHelper=new DatabaseHelper(this);
         SQLiteDatabase database=databaseHelper.getReadableDatabase();
 

@@ -32,7 +32,6 @@ public class DisplayEquipmentActivity extends AppCompatActivity
 
         addEquipment=(TextView) findViewById(R.id.add_equipment);
 
-        ArrayList<Equipment> equipments=new ArrayList<Equipment>();
 
         DatabaseHelper databaseHelper=new DatabaseHelper(this);
         SQLiteDatabase database=databaseHelper.getReadableDatabase();
