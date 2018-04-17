@@ -25,6 +25,7 @@ public class CustomerContract
         public static final String COLUMN_ADDRESS="address";
         public static final String COLUMN_PHONE="phone";
         public static final String COLUMN_EMAIL="email";
+        public static final String COLUMN_PASSWORD="password";
         public static final String COLUMN_TRAINERID="trainer_id";
     }
 }

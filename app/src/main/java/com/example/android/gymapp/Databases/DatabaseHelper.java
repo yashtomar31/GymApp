@@ -27,6 +27,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
             + CustomerContract.CustomerEntry.COLUMN_ADDRESS+" TEXT NOT NULL, "
             + CustomerContract.CustomerEntry.COLUMN_EMAIL+" TEXT NOT NULL, "
             + CustomerContract.CustomerEntry.COLUMN_PHONE+" TEXT NOT NULL, "
+            + CustomerContract.CustomerEntry.COLUMN_PASSWORD+" TEXT NOT NULL, "
             + CustomerContract.CustomerEntry.COLUMN_TRAINERID+" INTEGER, "
             + "FOREIGN KEY ("+ CustomerContract.CustomerEntry.COLUMN_TRAINERID+") REFERENCES "+ TrainerContract.TrainerEntry.TABLE_NAME+"("+ TrainerContract.TrainerEntry.COLUMN_TRAINERID+")"+");";
 
