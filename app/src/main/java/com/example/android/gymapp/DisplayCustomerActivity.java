@@ -1,4 +1,4 @@
-package com.example.android.gymapp.Databases;
+package com.example.android.gymapp;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,6 +9,9 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.example.android.gymapp.Databases.Customer;
+import com.example.android.gymapp.Databases.CustomerContract;
+import com.example.android.gymapp.Databases.DatabaseHelper;
 import com.example.android.gymapp.R;
 
 import java.util.ArrayList;

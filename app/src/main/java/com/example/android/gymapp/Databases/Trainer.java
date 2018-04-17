@@ -23,4 +23,10 @@ public class Trainer
         this.age=age;
         this.phone=phone;
     }
+
+    @Override
+    public String toString()
+    {
+        return String.valueOf(trainerID)+":"+name+":"+level+":"+age+":"+email+":"+phone;
+    }
 }

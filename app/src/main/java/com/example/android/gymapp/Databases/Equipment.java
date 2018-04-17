@@ -16,4 +16,11 @@ public class Equipment
         this.name=name;
         this.type=type;
     }
+
+    @Override
+    public String toString()
+    {
+        return String.valueOf(equipmentID)+":"+name+":"+type;
+    }
+
 }
