@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".SignupActivity" />
         <activity android:name=".DataActivity" />
-        <activity android:name=".Databases.DisplayCustomerActivity" />
+        <activity android:name=".DisplayCustomerActivity" />
         <activity android:name=".InsertEquipmentActivity" />
         <activity android:name=".InsertTrainerActivity" />
         <activity android:name=".DisplayEquipmentActivity" />
