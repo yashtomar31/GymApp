@@ -22,7 +22,9 @@
         <activity android:name=".InsertEquipmentActivity" />
         <activity android:name=".InsertTrainerActivity" />
         <activity android:name=".DisplayEquipmentActivity" />
-        <activity android:name=".DisplayTrainerActivity"></activity>
+        <activity android:name=".DisplayTrainerActivity" />
+        <activity android:name=".SelectTrainerActivity" />
+        <activity android:name=".GetMembershipActivity"></activity>
     </application>
 
 </manifest>

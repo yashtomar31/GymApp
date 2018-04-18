@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity
     {
         loginButton.setEnabled(true);
         Intent intent=new Intent(getApplicationContext(), DataActivity.class);
-
+        intent.putExtra("ID", cUserId);
         startActivity(intent);
         finish();
     }

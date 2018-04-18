@@ -46,6 +46,8 @@ public class SignupActivity extends AppCompatActivity
     @InjectView(R.id.input_phone)
     EditText phoneEditText;
 
+    private static long id=0;
+
     private static Button signUpButton;
     private static TextView linkToLogin;
 
@@ -134,6 +136,7 @@ public class SignupActivity extends AppCompatActivity
 
 
         long id=database.insert(CustomerContract.CustomerEntry.TABLE_NAME, null, cv);
+        SignupActivity.id=id;
         Log.d("database","Current user id: "+String.valueOf(id));
 
         database.close();
@@ -171,7 +174,7 @@ public class SignupActivity extends AppCompatActivity
     {
         signUpButton.setEnabled(true);
         Intent intent=new Intent(getApplicationContext(), MainActivity.class);
-        intent.putExtra("ACTIONBAR", nameEditText.getText().toString());
+        intent.putExtra("ID", id);
         startActivity(intent);
         finish();
     }

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorAccent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_get_membership1"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:text="1 year @ 1000Rs"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorAccent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_get_membership2"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:text="2 years @ 1500Rs"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorAccent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_get_membership3"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:text="3 years @ 2500Rs"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    </FrameLayout>
+
+
+    </LinearLayout>

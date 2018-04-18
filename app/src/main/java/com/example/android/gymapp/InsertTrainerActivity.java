@@ -132,8 +132,8 @@ public class InsertTrainerActivity extends AppCompatActivity
     private void onSuccess()
     {
         addTrainer.setEnabled(true);
-        Intent intent=new Intent(getApplicationContext(),DataActivity.class);
-        startActivity(intent);
+//        Intent intent=new Intent(getApplicationContext(),DataActivity.class);
+//        startActivity(intent);
         finish();
     }
 

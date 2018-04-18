@@ -150,8 +150,8 @@ public class InsertEquipmentActivity extends AppCompatActivity
     private void onSuccess()
     {
         addEquipment.setEnabled(true);
-        Intent intent=new Intent(getApplicationContext(),DataActivity.class);
-        startActivity(intent);
+//        Intent intent=new Intent(getApplicationContext(),DataActivity.class);
+//        startActivity(intent);
         finish();
     }
 

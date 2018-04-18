@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorPrimary">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_text_set_trainer"
+            android:textSize="20sp"
+            android:hint="Select Trainer"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="35dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_set_trainer"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:text="Available Trainers"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorAccent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_set_trainer"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:text="Select Trainer"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    </FrameLayout>
+
+
+</LinearLayout>
