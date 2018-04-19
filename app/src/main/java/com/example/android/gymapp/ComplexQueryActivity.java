@@ -12,6 +12,7 @@ import com.example.android.gymapp.Databases.CustomerContract;
 import com.example.android.gymapp.Databases.DatabaseHelper;
 import com.example.android.gymapp.Databases.Equipment;
 import com.example.android.gymapp.Databases.EquipmentContract;
+import com.example.android.gymapp.Databases.MembershipContract;
 
 public class ComplexQueryActivity extends AppCompatActivity
 {
@@ -60,7 +61,7 @@ public class ComplexQueryActivity extends AppCompatActivity
         {
             do
             {
-                String ret=cursor.getInt(0)+" "+cursor.getString(1);
+                String ret=cursor.getInt(0)+":"+cursor.getString(1);
                 Log.d("database", ret);
                 output+=ret;
                 output+="\n";
@@ -83,7 +84,7 @@ public class ComplexQueryActivity extends AppCompatActivity
         {
             do
             {
-                String ret=String.valueOf(cursor.getFloat(0))+" "+String.valueOf(cursor.getInt(1));
+                String ret=String.valueOf(cursor.getFloat(0))+":"+String.valueOf(cursor.getInt(1));
                 Log.d("database", ret);
                 output+=ret;
                 output+="\n";
@@ -96,6 +97,25 @@ public class ComplexQueryActivity extends AppCompatActivity
 
     private void complex3(SQLiteDatabase database)
     {
+        String selectQuery="SELECT "+ CustomerContract.CustomerEntry.COLUMN_NAME+", "+ MembershipContract.MembershipEntry.COLUMN_MEMBERSHIPLENGTH+", "+ MembershipContract.MembershipEntry.COLUMN_DATECREATED+" FROM "+ CustomerContract.CustomerEntry.TABLE_NAME+" a INNER JOIN "+ MembershipContract.MembershipEntry.TABLE_NAME+" b ON a."+ CustomerContract.CustomerEntry.COLUMN_CUSTOMERID+"=b."+ MembershipContract.MembershipEntry.COLUMN_CUSTOMERID;
+        Cursor cursor=database.rawQuery(selectQuery, null);
+
+        String output="";
+        output+="Name:Membership Length:Date Created\n";
+
+        if(cursor.moveToFirst())
+        {
+            do
+            {
+                String ret=cursor.getString(0)+":"+cursor.getString(1)+":"+cursor.getString(2);
+                Log.d("database", ret);
+                output+=ret;
+                output+="\n";
+            }while(cursor.moveToNext());
+        }
+
+        Log.d("database", output);
+        outputText.setText(output);
 
     }
 

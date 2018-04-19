@@ -192,7 +192,7 @@
             android:id="@+id/btn_complex3"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
-            android:text="Display All Equipments"
+            android:text="Show membership length and date createdd for each customer"
             android:background="?attr/selectableItemBackgroundBorderless"/>
 
     </FrameLayout>
