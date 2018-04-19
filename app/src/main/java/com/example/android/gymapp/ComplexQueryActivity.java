@@ -13,6 +13,7 @@ import com.example.android.gymapp.Databases.DatabaseHelper;
 import com.example.android.gymapp.Databases.Equipment;
 import com.example.android.gymapp.Databases.EquipmentContract;
 import com.example.android.gymapp.Databases.MembershipContract;
+import com.example.android.gymapp.Databases.TrainerContract;
 
 public class ComplexQueryActivity extends AppCompatActivity
 {
@@ -121,7 +122,25 @@ public class ComplexQueryActivity extends AppCompatActivity
 
     private void complex4(SQLiteDatabase database)
     {
+        String selectQuery="SELECT a."+CustomerContract.CustomerEntry.COLUMN_NAME+", a."+ CustomerContract.CustomerEntry.COLUMN_PHONE+", b."+ TrainerContract.TrainerEntry.COLUMN_PHONE+" FROM "+ CustomerContract.CustomerEntry.TABLE_NAME+" a INNER JOIN "+ TrainerContract.TrainerEntry.TABLE_NAME+" b ON a."+ CustomerContract.CustomerEntry.COLUMN_TRAINERID+"=b."+ TrainerContract.TrainerEntry.COLUMN_TRAINERID+" WHERE a."+ CustomerContract.CustomerEntry.COLUMN_AGE+">18";
+        Cursor cursor=database.rawQuery(selectQuery, null);
 
+        String output="";
+        output+="Name:Customer Phone: Trainer Phone\n";
+
+        if(cursor.moveToFirst())
+        {
+            do
+            {
+                String ret=cursor.getString(0)+":"+cursor.getString(1)+":"+cursor.getString(2);
+                Log.d("database", ret);
+                output+=ret;
+                output+="\n";
+            }while(cursor.moveToNext());
+        }
+
+        Log.d("database", output);
+        outputText.setText(output);
     }
 
     private void complex5(SQLiteDatabase database)

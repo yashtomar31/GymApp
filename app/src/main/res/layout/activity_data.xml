@@ -192,7 +192,7 @@
             android:id="@+id/btn_complex3"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
-            android:text="Show membership length and date createdd for each customer"
+            android:text="Display membership length and date createdd for each customer"
             android:background="?attr/selectableItemBackgroundBorderless"/>
 
     </FrameLayout>
@@ -210,7 +210,7 @@
             android:id="@+id/btn_complex4"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
-            android:text="Display All Equipments"
+            android:text="Display phone numbers of customer and trainer and customer name for all customers who are above 18 years old"
             android:background="?attr/selectableItemBackgroundBorderless"/>
 
     </FrameLayout>
