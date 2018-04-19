@@ -27,6 +27,7 @@ public class DataActivity extends AppCompatActivity
     Button complex3;
     Button complex4;
     Button complex5;
+    Button complex6;
 
     public static long currentID=0;
 
@@ -54,6 +55,7 @@ public class DataActivity extends AppCompatActivity
         complex3=(Button) findViewById(R.id.btn_complex3);
         complex4=(Button) findViewById(R.id.btn_complex4);
         complex5=(Button) findViewById(R.id.btn_complex5);
+        complex6=(Button) findViewById(R.id.btn_complex6);
 
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,6 +165,15 @@ public class DataActivity extends AppCompatActivity
             public void onClick(View v) {
                 Intent intent=new Intent(getApplicationContext(), ComplexQueryActivity.class);
                 intent.putExtra("COMPLEX", 5);
+                startActivity(intent);
+            }
+        });
+
+        complex6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), ComplexQueryActivity.class);
+                intent.putExtra("COMPLEX", 6);
                 startActivity(intent);
             }
         });

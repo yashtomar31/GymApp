@@ -45,6 +45,7 @@ public class ComplexQueryActivity extends AppCompatActivity
             case 3: complex3(database);break;
             case 4: complex4(database);break;
             case 5: complex5(database);break;
+            case 6: complex6(database);break;
         }
 
     }
@@ -156,6 +157,29 @@ public class ComplexQueryActivity extends AppCompatActivity
             do
             {
                 String ret=String.valueOf(cursor.getInt(0))+":"+cursor.getString(1)+":"+cursor.getString(2);
+                Log.d("database", ret);
+                output+=ret;
+                output+="\n";
+            }while(cursor.moveToNext());
+        }
+
+        Log.d("database", output);
+        outputText.setText(output);
+    }
+
+    private void complex6(SQLiteDatabase database)
+    {
+        String selectQuery="SELECT b."+ MembershipContract.MembershipEntry.COLUMN_EXPIRYDATE+", c."+ TrainerContract.TrainerEntry.COLUMN_EMAIL+" FROM "+CustomerContract.CustomerEntry.TABLE_NAME+" a INNER JOIN "+ MembershipContract.MembershipEntry.TABLE_NAME+" b on a."+ CustomerContract.CustomerEntry.COLUMN_CUSTOMERID+"=b."+ MembershipContract.MembershipEntry.COLUMN_CUSTOMERID+" INNER JOIN "+ TrainerContract.TrainerEntry.TABLE_NAME+" c on a."+ CustomerContract.CustomerEntry.COLUMN_TRAINERID+"=c."+ TrainerContract.TrainerEntry.COLUMN_TRAINERID;
+        Cursor cursor=database.rawQuery(selectQuery, null);
+
+        String output="";
+        output+="Membership Expiry Date:Trainer Email\n";
+
+        if(cursor.moveToFirst())
+        {
+            do
+            {
+                String ret=cursor.getString(0)+":"+cursor.getString(1);
                 Log.d("database", ret);
                 output+=ret;
                 output+="\n";
