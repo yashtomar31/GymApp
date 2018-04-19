@@ -228,7 +228,7 @@
             android:id="@+id/btn_complex5"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
-            android:text="Display All Trainers"
+            android:text="Display the youngest trainer's name and age for each training level"
             android:background="?attr/selectableItemBackgroundBorderless"/>
 
     </FrameLayout>

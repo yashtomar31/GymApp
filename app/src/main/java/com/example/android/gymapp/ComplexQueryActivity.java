@@ -126,7 +126,7 @@ public class ComplexQueryActivity extends AppCompatActivity
         Cursor cursor=database.rawQuery(selectQuery, null);
 
         String output="";
-        output+="Name:Customer Phone: Trainer Phone\n";
+        output+="Name:Customer Phone:Trainer Phone\n";
 
         if(cursor.moveToFirst())
         {
@@ -145,6 +145,24 @@ public class ComplexQueryActivity extends AppCompatActivity
 
     private void complex5(SQLiteDatabase database)
     {
+        String selectQuery="SELECT MIN("+ TrainerContract.TrainerEntry.COLUMN_AGE+"), "+ TrainerContract.TrainerEntry.COLUMN_NAME+" , "+ TrainerContract.TrainerEntry.COLUMN_LEVEL+" FROM "+ TrainerContract.TrainerEntry.TABLE_NAME+" GROUP BY "+ TrainerContract.TrainerEntry.COLUMN_LEVEL;
+        Cursor cursor=database.rawQuery(selectQuery, null);
 
+        String output="";
+        output+="Min Age:Name:Level\n";
+
+        if(cursor.moveToFirst())
+        {
+            do
+            {
+                String ret=String.valueOf(cursor.getInt(0))+":"+cursor.getString(1)+":"+cursor.getString(2);
+                Log.d("database", ret);
+                output+=ret;
+                output+="\n";
+            }while(cursor.moveToNext());
+        }
+
+        Log.d("database", output);
+        outputText.setText(output);
     }
 }
