@@ -24,7 +24,8 @@
         <activity android:name=".DisplayEquipmentActivity" />
         <activity android:name=".DisplayTrainerActivity" />
         <activity android:name=".SelectTrainerActivity" />
-        <activity android:name=".GetMembershipActivity"></activity>
+        <activity android:name=".GetMembershipActivity" />
+        <activity android:name=".ComplexQueryActivity"></activity>
     </application>
 
 </manifest>

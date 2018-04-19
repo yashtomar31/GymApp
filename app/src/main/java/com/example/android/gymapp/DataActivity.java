@@ -22,6 +22,11 @@ public class DataActivity extends AppCompatActivity
     Button showEquipments;
     Button getMembership;
     Button selectTrainer;
+    Button complex1;
+    Button complex2;
+    Button complex3;
+    Button complex4;
+    Button complex5;
 
     public static long currentID=0;
 
@@ -44,6 +49,11 @@ public class DataActivity extends AppCompatActivity
         showTrainers=(Button) findViewById(R.id.btn_show_trainers);
         getMembership=(Button) findViewById(R.id.btn_get_membership);
         selectTrainer=(Button) findViewById(R.id.btn_select_trainer);
+        complex1=(Button) findViewById(R.id.btn_complex1);
+        complex2=(Button) findViewById(R.id.btn_complex2);
+        complex3=(Button) findViewById(R.id.btn_complex3);
+        complex4=(Button) findViewById(R.id.btn_complex4);
+        complex5=(Button) findViewById(R.id.btn_complex5);
 
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,5 +122,49 @@ public class DataActivity extends AppCompatActivity
             }
         });
 
+        complex1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), ComplexQueryActivity.class);
+                intent.putExtra("COMPLEX", 1);
+                startActivity(intent);
+            }
+        });
+
+        complex2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), ComplexQueryActivity.class);
+                intent.putExtra("COMPLEX", 2);
+                startActivity(intent);
+            }
+        });
+
+        complex3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), ComplexQueryActivity.class);
+                intent.putExtra("COMPLEX", 3);
+                startActivity(intent);
+            }
+        });
+
+        complex4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), ComplexQueryActivity.class);
+                intent.putExtra("COMPLEX", 4);
+                startActivity(intent);
+            }
+        });
+
+        complex5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), ComplexQueryActivity.class);
+                intent.putExtra("COMPLEX", 5);
+                startActivity(intent);
+            }
+        });
     }
 }
