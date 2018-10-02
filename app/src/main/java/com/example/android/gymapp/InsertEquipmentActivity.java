@@ -40,6 +40,7 @@ public class InsertEquipmentActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        System.out.println("hack");
         setContentView(R.layout.activity_insert_equipment);
 
         ButterKnife.inject(this);
